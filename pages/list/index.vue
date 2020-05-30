@@ -92,7 +92,7 @@
 				const yue = date.getMonth()+1;
 				const ri = date.getDate()
 				const key = '0f2ab916b2cf4233895793ab1ae0588c'
-				const url = `http://api.avatardata.cn/HistoryToday/LookUp?page=1&type=2&rows=50&key=${key}&yue=${yue}&ri=${ri}`
+				const url = `https://api.avatardata.cn/HistoryToday/LookUp?page=1&type=2&rows=50&key=${key}&yue=${yue}&ri=${ri}`
 				uni.request({
 					url,
 					method: 'GET',
@@ -112,7 +112,7 @@
 				if(!flag) {
 					this.page = 1
 				}
-				const url = `http://api.avatardata.cn/MingRenMingYan/LookUp?keyword=${encodeURIComponent(this.searchVal?this.searchVal:char)}&key=${key}&page=${this.page}`
+				const url = `https://api.avatardata.cn/MingRenMingYan/LookUp?keyword=${encodeURIComponent(this.searchVal?this.searchVal:char)}&key=${key}&page=${this.page}`
 				uni.request({
 					url,
 					success(res) {

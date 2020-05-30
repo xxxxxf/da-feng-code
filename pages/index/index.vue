@@ -48,6 +48,13 @@
 			if(this.page !== 'l' || this.$refs.list.isLoad || this.$refs.list.tabIndex === 0) return
 			this.$refs.list.page++
 			this.$refs.list.getLang(true)
+		},
+		onShareAppMessage(res) {
+			return {
+				title: '好东西跟大家一起分享',
+				path: '/pages/index/index',
+				imageUrl: '../../static/0101aad413f5bbf2d744e2aed899d9ac.jpg'
+			}
 		}
 	}
 </script>
