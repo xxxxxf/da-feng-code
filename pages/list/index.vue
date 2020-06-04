@@ -40,7 +40,7 @@
 						{{ele.title}}
 					</view>
 					<view class="text-grey text-right">
-						———{{ele.year+'-'+ele.month+'-'+ele.day}}
+						——{{ele.year+'-'+ele.month+'-'+ele.day}}
 					</view>
 				</view>
 			</view>
@@ -55,7 +55,7 @@
 						</view>
 					</view>
 					<view class="text-grey margin-top-sm text-right">
-						———{{ele.famous_name}}
+						——{{ele.famous_name}}
 					</view>
 				</view>
 			</view>
@@ -92,10 +92,16 @@
 				const yue = date.getMonth()+1;
 				const ri = date.getDate()
 				const key = '0f2ab916b2cf4233895793ab1ae0588c'
-				const url = `https://api.avatardata.cn/HistoryToday/LookUp?page=1&type=2&rows=50&key=${key}&yue=${yue}&ri=${ri}`
+				let url = ''
+				// 解决 H5跨域问题
+				// #ifdef H5
+					url = `/api/HistoryToday/LookUp?page=1&type=2&rows=50&key=${key}&yue=${yue}&ri=${ri}`
+				// #endif
+				// #ifndef H5
+					url = `https://api.avatardata.cn/HistoryToday/LookUp?page=1&type=2&rows=50&key=${key}&yue=${yue}&ri=${ri}`
+				// #endif
 				uni.request({
 					url,
-					method: 'GET',
 					success(res) {
 						if(res.statusCode === 200) {
 							that.listToday = res.data.result
@@ -112,7 +118,13 @@
 				if(!flag) {
 					this.page = 1
 				}
-				const url = `https://api.avatardata.cn/MingRenMingYan/LookUp?keyword=${encodeURIComponent(this.searchVal?this.searchVal:char)}&key=${key}&page=${this.page}`
+				let url = ''
+				// #ifdef H5
+					url = `/api//MingRenMingYan/LookUp?keyword=${encodeURIComponent(this.searchVal?this.searchVal:char)}&key=${key}&page=${this.page}`
+				// #endif
+				// #ifndef H5
+					url = `https://api.avatardata.cn/MingRenMingYan/LookUp?keyword=${encodeURIComponent(this.searchVal?this.searchVal:char)}&key=${key}&page=${this.page}`
+				// #endif
 				uni.request({
 					url,
 					success(res) {
