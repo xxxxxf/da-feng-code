@@ -105,14 +105,22 @@
         "devServer" : {
             "disableHostCheck" : true,
             "proxy" : {
-                ".cn/" : {
-                    "target" : "https://api.avatardata",
+                "/HistoryToday" : {
+                    "target" : "https://api.avatardata.cn",
                     "changeOrigin" : true,
                     "secure" : false,
                     "pathRewrite" : {
-                        "^.cn/" : ".cn/"
+                        "^/HistoryToday" : "/HistoryToday"
                     }
-                }
+                },
+								"/MingRenMingYan" : {
+								    "target" : "https://api.avatardata.cn",
+								    "changeOrigin" : true,
+								    "secure" : false,
+								    "pathRewrite" : {
+								        "^/MingRenMingYan" : "/MingRenMingYan"
+								    }
+								}
             }
         },
         "domain" : "jiankou.top"
