@@ -95,7 +95,7 @@
 				let url = ''
 				// 解决 H5跨域问题
 				// #ifdef H5
-					url = `/api/HistoryToday/LookUp?page=1&type=2&rows=50&key=${key}&yue=${yue}&ri=${ri}`
+					url = `.cn/HistoryToday/LookUp?page=1&type=2&rows=50&key=${key}&yue=${yue}&ri=${ri}`
 				// #endif
 				// #ifndef H5
 					url = `https://api.avatardata.cn/HistoryToday/LookUp?page=1&type=2&rows=50&key=${key}&yue=${yue}&ri=${ri}`
@@ -120,7 +120,7 @@
 				}
 				let url = ''
 				// #ifdef H5
-					url = `/api//MingRenMingYan/LookUp?keyword=${encodeURIComponent(this.searchVal?this.searchVal:char)}&key=${key}&page=${this.page}`
+					url = `.cn/MingRenMingYan/LookUp?keyword=${encodeURIComponent(this.searchVal?this.searchVal:char)}&key=${key}&page=${this.page}`
 				// #endif
 				// #ifndef H5
 					url = `https://api.avatardata.cn/MingRenMingYan/LookUp?keyword=${encodeURIComponent(this.searchVal?this.searchVal:char)}&key=${key}&page=${this.page}`

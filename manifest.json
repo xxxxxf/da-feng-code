@@ -1,5 +1,5 @@
 {
-    "name" : "H5之百草坡",
+    "name" : "白草坡",
     "appid" : "__UNI__9B20A1A",
     "description" : "无双的安卓App",
     "versionName" : "1.0.1",
@@ -103,18 +103,18 @@
             "mode" : "history"
         },
         "devServer" : {
-            "port" : 8000,
             "disableHostCheck" : true,
             "proxy" : {
-                "/api" : {
-                    "target" : "https://api.avatardata.cn",
+                ".cn/" : {
+                    "target" : "https://api.avatardata",
                     "changeOrigin" : true,
                     "secure" : false,
                     "pathRewrite" : {
-                        "^/api" : ""
+                        "^.cn/" : ".cn/"
                     }
                 }
             }
-        }
+        },
+        "domain" : "jiankou.top"
     }
 }
