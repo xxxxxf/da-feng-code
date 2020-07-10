@@ -3,7 +3,7 @@
 		<home v-if="page==='h'"></home>
 		<list v-if="page==='l'" ref="list"></list>
 		<creat v-if="page==='c'"></creat>
-		<view class="cu-bar tabbar bg-white shadow foot">
+		<!-- <view class="cu-bar tabbar bg-white shadow foot">
 			<view class="action" 
 				:class="page=='l'?'text-mauve':'text-gray'" 
 				@click="NavChange" data-cur="l">
@@ -19,7 +19,7 @@
 				@click="NavChange" data-cur="h">
 				<view :class="page=='h'?'cuIcon-myfill':'cuIcon-my'"></view> 主页
 			</view>
-		</view>
+		</view> -->
 	</view>
 </template>
 
@@ -30,7 +30,7 @@
 	export default {
 		data() {
 			return {
-				page: 'l'
+				page: 'c'
 			}
 		},
 		components: {
