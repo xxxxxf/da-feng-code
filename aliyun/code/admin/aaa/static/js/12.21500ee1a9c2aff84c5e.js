@@ -1,2 +1,0 @@
-webpackJsonp([12],{"8hXn":function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var a={render:function(){var t=this.$createElement,e=this._self._c||t;return e("div",[e("h1",{staticStyle:{"text-align":"center","margin-top":"100px"}},[this._v(this._s(this.msg))])])},staticRenderFns:[]};var i=n("VU/8")({name:"Index",data:function(){return{msg:"命格无双 ， 一统江山 !"}}},a,!1,function(t){n("BqQa")},"data-v-0d248dd8",null);e.default=i.exports},BqQa:function(t,e){}});
-//# sourceMappingURL=12.21500ee1a9c2aff84c5e.js.map
